@@ -1,13 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from 'react-helmet';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Features from '../components/Features';
+import PopularItems from '../components/PopularItems';
+import Testimonials from '../components/Testimonials';
+import InstagramFeed from '../components/InstagramFeed';
+import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Puff & Bubble - Пекарня и Bubble Tea</title>
+        <meta name="description" content="Уникальное сочетание свежей выпечки и bubble tea в каждой чашке. Насладитесь нашими десертами и напитками в уютной атмосфере." />
+      </Helmet>
+
+      <Navbar />
+      
+      <main>
+        <Hero />
+        <Features />
+        <PopularItems />
+        <Testimonials />
+        <InstagramFeed />
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
